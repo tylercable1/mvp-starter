@@ -1,5 +1,5 @@
 # Project Name #
-
+The Beer App
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
 
@@ -21,24 +21,25 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-
+A must have for craft beer lovers. Easy access to the best breweries and beers in the area.
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-
+    Traveling? Want a beer? List of popular breweries in area, with directions and top rated beers. At the store and want to try local(not corporate) beer? Find list of beers that local brewers 'commonly' bottle and sell at stores.
 ## Problem ##
   > Describe the problem your product solves.
-
+  When traveling people generally want to go out, and they generally want to try things unique to the place they are. 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
-
+  Will provide list of breweries close to current location, along with popular beers and information.
 ## Quote from You ##
   > A quote from a spokesperson in your company.
-
+  This app will connect craft beer lovers to popular local breweries, and allow them to check out beer lists and descriptions.
 ## How to Get Started ##
   > Describe how easy it is to get started.
-
+  Simply plug in your location, and view a list of breweries sorted by state.
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-
+  I'm from LA and visiting Bend OR for the first time, I'd heard good things about their breweries, but with The Beer App, I was connected with 3 amazing breweries, and was able to walk up to the bar and order their *best* beer like I was a local.
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  This app is a must have for any beer lover who's traveling. On a business trip? Use the beer app. On vacation with the fam? find a list of family friendly breweries.
