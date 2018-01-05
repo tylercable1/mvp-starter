@@ -15,12 +15,12 @@ class App extends React.Component {
 
   componentDidMount() {
     $.ajax({
-      url: 'http://127.0.0.1:3000/breweries', 
-      method:'GET',
+      url: '/breweries', 
+      method:'POST',
       contentType: 'application/json',
-      data: 'o',
+      data: JSON.stringify({q:'o'}),
       success: (data) => {
-        renderBreweries(data)
+        this.renderBreweries(data);
       },
       error: (err) => {
         console.log('err', err);
@@ -30,7 +30,7 @@ class App extends React.Component {
 
   renderBreweries(data) {
     this.setState({
-      breweries:data
+      breweries:data.data
     })
   }
 

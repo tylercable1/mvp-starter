@@ -18,13 +18,16 @@ app.get('/beers', function (req, res) {
   // });
 });
 
-app.get('/breweries', function (req, res) {
+app.post('/breweries', function (req, res) {
 
-  api.breweryRequest('oak', function(err, resp, body){
+  console.log(req.body)
+
+  api.breweryRequest(req.body.q, function(data, resp, err){
   	if(err){
-  	  console.log(err)
+  	  console.log(err);
   	} else{
-  	  res.json(body)
+  	  
+  	  res.json(JSON.parse(data));
   	}
   });
     

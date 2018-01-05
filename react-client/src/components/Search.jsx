@@ -1,5 +1,5 @@
 import React from 'react';
-
+import $ from 'jquery';
 class Search extends React.Component {
   constructor(props) {
   	super(props);
@@ -15,10 +15,10 @@ class Search extends React.Component {
   
   search() {
     $.ajax({
-      url: 'http://127.0.0.1:3000/breweries', 
-      method:'GET',
+      url: '/breweries', 
+      method:'POST',
       contentType: 'application/json',
-      data: this.state.qStr,
+      data: JSON.stringify({q: this.state.qStr}),
       success: (data) => {
         this.props.renderBreweries(data);
       },
