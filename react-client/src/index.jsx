@@ -15,11 +15,22 @@ class App extends React.Component {
 
   componentDidMount() {
     // use get request here. check database first. Then, ping api.
-    $.ajax({
+    // $.ajax({
+    //   url: '/breweries', 
+    //   method:'POST',
+    //   contentType: 'application/json',
+    //   data: JSON.stringify({q:'e'}),
+    //   success: (data) => {
+    //     this.renderBreweries(data);
+    //   },
+    //   error: (err) => {
+    //     console.log('err', err);
+    //   }
+    // });
+        $.ajax({
       url: '/breweries', 
-      method:'POST',
+      method:'GET',
       contentType: 'application/json',
-      data: JSON.stringify({q:'e'}),
       success: (data) => {
         this.renderBreweries(data);
       },
@@ -30,9 +41,15 @@ class App extends React.Component {
   }
 
   renderBreweries(data) {
+    if(Array.isArray(data)) {
+      this.setState({
+        breweries:data
+      })
+    } else { 
     this.setState({
       breweries:data.data
     })
+    }
   }
 
   render () {

@@ -11,11 +11,9 @@ class ListItem extends React.Component {
   }
 
   showDescription() {
-    console.log(Description, this.state.isHidden)
     this.setState({
       isHidden: !this.state.isHidden
     })
-    console.log(this.state.isHidden)
   }
   
 
@@ -23,7 +21,7 @@ class ListItem extends React.Component {
   	return (
   <div>
    
-      <li onClick={this.showDescription.bind(this)} >
+      <li onClick={this.showDescription} >
       	{ this.props.brewery.name }
         {!this.state.isHidden && <div><a href={this.props.brewery.website}>{this.props.brewery.website}</a><br></br><p>{this.props.brewery.description}</p></div>}
       </li>

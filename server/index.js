@@ -7,15 +7,15 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 var api = require('../helpers/apiRequest.js');
 var db = require('../database-mongo/index.js');
 
-app.get('/beers', function (req, res) {
-  // items.selectAll(function(err, data) {
+app.get('/breweries', function (req, res) {
+  db.selectAll(function(err, data) {
 
     if(err) {
       res.sendStatus(500);
     } else {
       res.json(data);
     }
-  // });
+  });
 });
 
 app.post('/breweries', function (req, res) {
