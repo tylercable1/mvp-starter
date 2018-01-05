@@ -13,7 +13,7 @@ var breweryRequest = function(qStr, callback) {
   }	 
   request(options, function (error, response, body) {
 	if (error) throw new Error(error);
-	callback(body);
+	callback(error, response, body);
   });
 }
 

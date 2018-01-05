@@ -5,7 +5,7 @@ const List = (props) => (
   <div>
     <h4> List Component </h4>
     Here are { props.breweries.length } breweries.
-    { props.breweries.map(brewery => <ListItem brewery={brewery}/>)}
+    { props.breweries.map(brewery => <ListItem key={brewery.id} brewery={brewery}/>)}
   </div>
 )
 

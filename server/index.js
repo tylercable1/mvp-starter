@@ -19,14 +19,10 @@ app.get('/beers', function (req, res) {
 });
 
 app.post('/breweries', function (req, res) {
-
-  console.log(req.body)
-
-  api.breweryRequest(req.body.q, function(data, resp, err){
+  api.breweryRequest(req.body.q, function(err, resp, data){
   	if(err){
   	  console.log(err);
   	} else{
-  	  
   	  res.json(JSON.parse(data));
   	}
   });
