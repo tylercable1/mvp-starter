@@ -8,13 +8,12 @@ var breweryRequest = function(qStr, callback) {
 	qs: 
 	 { key: `${config.ApiKey}`,
 	  q: `${qStr}`,
-	  type: 'brewery' },
-	  headers: 
-	   { 'Postman-Token': 'cd90d13b-b5fc-cc5b-e825-855fe9812540',
-	     'Cache-Control': 'no-cache' } };
+	  type: 'brewery' 
+	 }
+  }	 
   request(options, function (error, response, body) {
 	if (error) throw new Error(error);
-	console.log(body);
+	callback(body);
   });
 }
 
