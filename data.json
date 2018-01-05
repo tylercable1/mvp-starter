@@ -1,0 +1,61 @@
+{
+  "status" : "success",
+  "numberOfPages" : 63,
+  "data" : [
+    {
+      "id" : "KlSsWx",
+      "description" : "Eugenes premier brewery",
+      "name" : "Ninkasi",
+      "createDate" : "2012-01-02 11:50:52",
+      "mailingListUrl" : "",
+      "updateDate" : "",
+      "images" : {
+        "medium" : "",
+        "large" : "",
+        "icon" : ""
+      },
+      "established" : "",
+      "isOrganic" : "N",
+      "website" : "www.ninkasibrewing.com",
+      "status" : "verified",
+      "statusDisplay" : "Verified"
+    },
+    {
+      "id" : "KlSsWY",
+      "description" : "Eugene and Springfields premier brewery",
+      "name" : "Hop Valley",
+      "createDate" : "2012-01-02 11:50:52",
+      "mailingListUrl" : "",
+      "updateDate" : "",
+      "images" : {
+        "medium" : "",
+        "large" : "",
+        "icon" : ""
+      },
+      "established" : "",
+      "isOrganic" : "N",
+      "website" : "https://www.hopvalleybrewing.com/",
+      "status" : "verified",
+      "statusDisplay" : "Verified"
+    },
+    {
+      "id" : "KlSsWw",
+      "description" : "We are definitely Eugenes premier brewery",
+      "name" : "Oakshire Brewing",
+      "createDate" : "2012-01-02 11:50:52",
+      "mailingListUrl" : "",
+      "updateDate" : "",
+      "images" : {
+        "medium" : "",
+        "large" : "",
+        "icon" : ""
+      },
+      "established" : "",
+      "isOrganic" : "N",
+      "website" : "www.oakbrew.com/",
+      "status" : "verified",
+      "statusDisplay" : "Verified"
+    }        
+  ],
+  "currentPage" : 1
+}
