@@ -22,13 +22,13 @@ app.post('/breweries', function (req, res) {
   api.breweryRequest(req.body.q, function(err, resp, data){
   	if(err){
   	  console.log(err);
-  	} else{
-  	  res.json(JSON.parse(data));
+  	} else {
+  	  data = JSON.parse(data);
+  	  // db.writeToDB(data, function(results) {
+  	  	res.json(data)
+  	  // });
   	}
   });
-    
-  // items.selectAll(function(err, data) {    
-  // });
 });
 
 app.listen(3000, function() {

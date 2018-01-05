@@ -1,9 +1,36 @@
 import React from 'react';
+import Description from './description.jsx'
 
-const ListItem = (props) => (
+class ListItem extends React.Component {
+  constructor(props) {
+  	super(props);
+  	this.state = {
+  	  isHidden: true
+  	}
+  	this.showDescription = this.showDescription.bind(this)
+  }
+
+  showDescription() {
+    console.log(Description, this.state.isHidden)
+    this.setState({
+      isHidden: !this.state.isHidden
+    })
+    console.log(this.state.isHidden)
+  }
+  
+
+  render() {
+  	return (
   <div>
-    { props.brewery.description }
+   
+      <li onClick={this.showDescription.bind(this)} >
+      	{ this.props.brewery.name }
+        {!this.state.isHidden && <div><a href={this.props.brewery.website}>{this.props.brewery.website}</a><br></br><p>{this.props.brewery.description}</p></div>}
+      </li>
+    
   </div>
-)
+  	)
+  }
+}
 
 export default ListItem;

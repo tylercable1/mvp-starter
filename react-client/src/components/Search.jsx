@@ -7,6 +7,7 @@ class Search extends React.Component {
   	  qStr: ''
   	}
   	this.search = this.search.bind(this)
+  	this.enterPress = this.enterPress.bind(this)
   }
 
   onBreweryLookup() {
@@ -14,6 +15,7 @@ class Search extends React.Component {
   }
   
   search() {
+    // check database first, if no results, then ping api
     $.ajax({
       url: '/breweries', 
       method:'POST',
@@ -26,13 +28,18 @@ class Search extends React.Component {
         console.log('err', err);
       }
     });    
-
+  
   }  
+    enterPress(e) {
+      if(e.charCode === 13) {
+      	this.search()
+      }
+    }
 
   render() {
 	return (
 	<div>
-	  <input onChange={(e) => {this.setState({qStr: e.target.value})}}>
+	  <input onKeyPress={(e) => {this.enterPress(e)}} onChange={(e) => {this.setState({qStr: e.target.value})}}>
 	    	
 	  </input>
 	  <button onClick={this.search}>

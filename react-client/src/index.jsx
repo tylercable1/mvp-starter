@@ -14,11 +14,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    // use get request here. check database first. Then, ping api.
     $.ajax({
       url: '/breweries', 
       method:'POST',
       contentType: 'application/json',
-      data: JSON.stringify({q:'o'}),
+      data: JSON.stringify({q:'e'}),
       success: (data) => {
         this.renderBreweries(data);
       },

@@ -31,20 +31,23 @@ var selectAll = function(callback) {
 };
 
 var writeToDB = function(data, callback) {
-  Promise.all(data.map(function(brewery) {
+  Promise.all(data.data.map(function(brewery) {
     var temp = new Brewery({
-      id: data.data.id,
-      description: data.data.description,
-      name: data.data.name,
-      website: data.data.website
+      id: brewery.id,
+      description: brewery.description? brewery.description: 'good beer',
+      name: brewery.name,
+      website: brewery.website
     });
-    return brewery.save(function(err, brewery) {
-      if(err) return console.log(err);
+    return temp.save(function(err, temp) {
+      if(err) {console.log(err)};
     });
-  })).then(function(data) {
-    callback(data);
+  })).then(function(results) {
+    callback(results);
   });
 }
 
 module.exports.selectAll = selectAll;
 module.exports.writeToDB = writeToDB;
+
+
+
