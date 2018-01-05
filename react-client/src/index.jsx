@@ -9,9 +9,8 @@ class App extends React.Component {
     super(props);
     this.state = { 
       breweries: [],
-      qStr: ''
     }
-    this.search = this.search.bind(this)
+    this.renderBreweries = this.renderBreweries.bind(this)
   }
 
   componentDidMount() {
@@ -21,9 +20,7 @@ class App extends React.Component {
       contentType: 'application/json',
       data: 'o',
       success: (data) => {
-        this.setState({
-          breweries: data
-        })
+        renderBreweries(data)
       },
       error: (err) => {
         console.log('err', err);
@@ -31,27 +28,16 @@ class App extends React.Component {
     });
   }
 
-  search() {
-    $.ajax({
-      url: 'http://127.0.0.1:3000/breweries', 
-      method:'GET',
-      contentType: 'application/json',
-      data: this.state.qStr,
-      success: (data) => {
-        this.setState({
-          breweries: data
-        })
-      },
-      error: (err) => {
-        console.log('err', err);
-      }
-    });    
+  renderBreweries(data) {
+    this.setState({
+      breweries:data
+    })
   }
 
   render () {
     return (<div>
       <h1>Beer App</h1>
-      <Search search={this.search} />
+      <Search search={this.search} renderBreweries={this.renderBreweries} />
       <List breweries={this.state.breweries}/>
     </div>)
   }
